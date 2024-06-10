@@ -212,7 +212,7 @@
 								<a role="menuitem" tabindex="-1" href="#" data-lock-screen="true"><i class="bx bx-lock"></i> Lock Screen</a>
 							</li>
 							<li>
-								<a role="menuitem" tabindex="-1" href="pages-signin.html"><i class="bx bx-power-off"></i> Logout</a>
+								<a role="menuitem" tabindex="-1" href="<?= base_url() ?>"><i class="bx bx-power-off"></i> Logout</a>
 							</li>
 						</ul>
 					</div>
@@ -241,21 +241,21 @@
 
 							<ul class="nav nav-main">
 								<li>
-									<a class="nav-link" href="#">
+									<a class="nav-link" href="<?= base_url('beranda') ?>">
 										<i class="bx bx-home-alt" aria-hidden="true"></i>
-										<span>Dashboard</span>
+										<span>Beranda</span>
 									</a>
 								</li>
 
 								<li>
-									<a class="nav-link" href="#">
+									<a class="nav-link" href="<?= base_url('siswa') ?>">
 										<i class="bx bx-loader-circle" aria-hidden="true"></i>
 										<span>Siswa</span>
 									</a>
 								</li>
 
 								<li>
-									<a class="nav-link" href="#">
+									<a class="nav-link" href="<?= base_url('guru') ?>">
 										<i class="bx bx-table" aria-hidden="true"></i>
 										<span>Guru</span>
 									</a>
@@ -343,8 +343,6 @@
 									<i class="bx bx-home-alt"></i>
 								</a>
 							</li>
-
-							<li><span>Pages</span></li>
 
 							<li><span><?= $title ?></span></li>
 
