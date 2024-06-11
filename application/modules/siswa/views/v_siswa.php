@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="col-lg-6">
+	<div class="col-lg-12">
 		<section class="card">
 			<header class="card-header">
 				<div class="card-actions">
@@ -12,32 +12,30 @@
 			<div class="card-body">
 				<table class="table table-responsive-md mb-0">
 					<thead>
-						<tr>
-							<th>#</th>
-							<th>First Name</th>
-							<th>Last Name</th>
-							<th>Username</th>
+						<tr><!-- class="text-center" -->
+							<th>No</th>
+							<th>Nama Siswa</th>
+							<th>Kelas Siswa</th>
+							<th>Alamat Siswa</th>
+							<th>Nomor Telepon</th>
+							<th>Action</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td>1</td>
-							<td>Mark</td>
-							<td>Otto</td>
-							<td>@mdo</td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td>Jacob</td>
-							<td>Thornton</td>
-							<td>@fat</td>
-						</tr>
-						<tr>
-							<td>3</td>
-							<td>Larry</td>
-							<td>the Bird</td>
-							<td>@twitter</td>
-						</tr>
+						<?php $no = 1;
+						foreach ($siswa as $key) : ?>
+							<tr>
+								<td><?= $no++ ?></td>
+								<td><?= $key->nama_siswa ?></td>
+								<td><?= $key->kelas_siswa ?></td>
+								<td><?= $key->alamat_siswa ?></td>
+								<td><?= $key->nomor_telepon ?></td>
+								<td>
+									<a href="#" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
+									<a href="#" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
+								</td>
+							</tr>
+						<?php endforeach ?>
 					</tbody>
 				</table>
 			</div>
