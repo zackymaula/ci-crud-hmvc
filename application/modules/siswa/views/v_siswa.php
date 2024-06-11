@@ -8,6 +8,7 @@
 				</div>
 
 				<h2 class="card-title">Siswa</h2>
+				<a href="<?= base_url('siswa/tambah') ?>" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah Siswa</a>
 			</header>
 			<div class="card-body">
 				<table class="table table-responsive-md mb-0">

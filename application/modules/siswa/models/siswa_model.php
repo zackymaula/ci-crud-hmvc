@@ -8,6 +8,11 @@ class Siswa_model extends CI_Model
     {
         return $this->db->get($table); //sama aja dengan SELECT * FROM table
     }
+
+    public function insert_data($data, $table)
+    {
+        $this->db->insert($table, $data);
+    }
 }
 
 /* End of file Siswa_model.php */
