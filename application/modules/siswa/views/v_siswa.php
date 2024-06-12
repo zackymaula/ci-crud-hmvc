@@ -1,5 +1,9 @@
 <div class="row">
 	<div class="col-lg-12">
+
+		<?= $this->session->flashdata('pesan');
+		?>
+
 		<section class="card">
 			<header class="card-header">
 				<div class="card-actions">

@@ -13,6 +13,10 @@ class Siswa_model extends CI_Model
     {
         $this->db->insert($table, $data);
     }
+
+    public function delete_data()
+    {
+    }
 }
 
 /* End of file Siswa_model.php */

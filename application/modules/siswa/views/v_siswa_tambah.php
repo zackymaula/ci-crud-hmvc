@@ -14,29 +14,33 @@
                     <div class="form-group row pb-3">
                         <label class="col-sm-4 control-label text-sm-end pt-2">Nama Siswa: </label>
                         <div class="col-sm-8">
-                            <input type="text" name="nama_siswa" class="form-control">
-                            <?= form_error('nama_siswa', '<div class="text-small text-danger">', '</div>'); ?>
+                            <input type="text" name="nama_siswa" class="form-control" autofocus>
+                            <?= form_error('nama_siswa', '<div class="text-small text-danger">', '</div>');
+                            ?>
                         </div>
                     </div>
                     <div class="form-group row pb-3">
                         <label class="col-sm-4 control-label text-sm-end pt-2">Kelas Siswa: </label>
                         <div class="col-sm-8">
                             <input type="text" name="kelas_siswa" class="form-control">
-                            <?= form_error('kelas_siswa', '<div class="text-small text-danger">', '</div>'); ?>
+                            <?= form_error('kelas_siswa', '<div class="text-small text-danger">', '</div>');
+                            ?>
                         </div>
                     </div>
                     <div class="form-group row pb-4">
                         <label class="col-lg-4 control-label text-lg-end pt-2" for="textareaDefault">Alamat Siswa: </label>
                         <div class="col-lg-8">
                             <textarea name="alamat_siswa" class="form-control" rows="3" id="textareaDefault"></textarea>
-                            <?= form_error('alamat_siswa', '<div class="text-small text-danger">', '</div>'); ?>
+                            <?= form_error('alamat_siswa', '<div class="text-small text-danger">', '</div>');
+                            ?>
                         </div>
                     </div>
                     <div class="form-group row pb-3">
                         <label class="col-sm-4 control-label text-sm-end pt-2">Nomor Telepon: </label>
                         <div class="col-sm-8">
                             <input type="text" name="nomor_telepon" class="form-control">
-                            <?= form_error('nomor_telepon', '<div class="text-small text-danger">', '</div>'); ?>
+                            <?= form_error('nomor_telepon', '<div class="text-small text-danger">', '</div>');
+                            ?>
                         </div>
                     </div>
                 </div>

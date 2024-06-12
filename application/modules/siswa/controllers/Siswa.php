@@ -34,9 +34,9 @@ class Siswa extends CI_Controller
 
 	public function tambah_aksi()
 	{
-		//$this->_rules();
+		// $this->_rules();
 
-		// if ($this->form_validation->run() == FALSE) {
+		// if ($this->form_validation->run($this) == FALSE) {
 		// 	$this->tambah();
 		// } else {
 		$data = array(
@@ -47,29 +47,30 @@ class Siswa extends CI_Controller
 		);
 
 		$this->siswa_model->insert_data($data, 'tbl_siswa');
-		$this->session->set_flashdata('pesan', '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-														Data berhasil ditambahkan
-														<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-															<span aria-hidden="true">&times;</span>
-														</button>
-													</div>');
+		$this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+													Data berhasil ditambahkan!
+													<button type="button" class="btn-close" data-bs-dismiss="alert" aria-hidden="true" aria-label="Close"></button>
+												</div>');
+
 		redirect('siswa');
 		//}
 	}
 
-	public function _rules()
-	{
-		$this->form_validation->set_rules('nama_siswa', 'Nama Siswa', 'required', array(
-			'required' => '%s harus diisi !!'
-		)); //trim|required|min_length[5]|max_length[12]
-		$this->form_validation->set_rules('kelas_siswa', 'Kelas Siswa', 'required', array(
-			'required' => '%s harus diisi !!'
-		));
-		$this->form_validation->set_rules('alamat_siswa', 'Alamat Siswa', 'required', array(
-			'required' => '%s harus diisi !!'
-		));
-		$this->form_validation->set_rules('nomor_telepon', 'Nomor Telepon', 'required', array(
-			'required' => '%s harus diisi !!'
-		));
-	}
+	// 	public function _rules()
+	// 	{
+	// 		$this->form_validation->set_rules('nama_siswa', 'Nama Siswa', 'required', array(
+	// 			'required' => '%s harus diisi !!'
+	// 		)); //trim|required|min_length[5]|max_length[12]
+	// 		$this->form_validation->set_rules('kelas_siswa', 'Kelas Siswa', 'required', array(
+	// 			'required' => '%s harus diisi !!'
+	// 		));
+	// 		$this->form_validation->set_rules('alamat_siswa', 'Alamat Siswa', 'required', array(
+	// 			'required' => '%s harus diisi !!'
+	// 		));
+	// 		$this->form_validation->set_rules('nomor_telepon', 'Nomor Telepon', 'required', array(
+	// 			'required' => '%s harus diisi !!'
+	// 		));
+	// 	}
+
+
 }
