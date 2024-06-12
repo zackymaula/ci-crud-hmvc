@@ -48,12 +48,29 @@ class Siswa extends CI_Controller
 
 		$this->siswa_model->insert_data($data, 'tbl_siswa');
 		$this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
-													Data berhasil ditambahkan!
+													Data berhasil ditambahkan !
 													<button type="button" class="btn-close" data-bs-dismiss="alert" aria-hidden="true" aria-label="Close"></button>
 												</div>');
-
 		redirect('siswa');
 		//}
+	}
+
+	public function edit($id_siswa)
+	{
+		$data = array(
+			'id_siswa' => $id_siswa,
+			'nama_siswa' => $this->input->post('nama_siswa'),
+			'kelas_siswa' => $this->input->post('kelas_siswa'),
+			'alamat_siswa' => $this->input->post('alamat_siswa'),
+			'nomor_telepon' => $this->input->post('nomor_telepon'),
+		);
+
+		$this->siswa_model->update_data($data, 'tbl_siswa');
+		$this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+													Data berhasil dirubah !
+													<button type="button" class="btn-close" data-bs-dismiss="alert" aria-hidden="true" aria-label="Close"></button>
+												</div>');
+		redirect('siswa');
 	}
 
 	// 	public function _rules()

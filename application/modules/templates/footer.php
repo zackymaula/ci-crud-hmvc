@@ -82,6 +82,9 @@
 		<script src="<?= base_url('assets/template') ?>/vendor/jquery-placeholder/jquery.placeholder.js"></script>
 
 		<!-- Specific Page Vendor -->
+		<script src="<?= base_url('assets/template') ?>/vendor/select2/js/select2.js"></script>
+		<script src="<?= base_url('assets/template') ?>/vendor/pnotify/pnotify.custom.js"></script>
+
 
 		<!-- Theme Base, Components and Settings -->
 		<script src="<?= base_url('assets/template') ?>/js/theme.js"></script>
@@ -91,6 +94,8 @@
 
 		<!-- Theme Initialization Files -->
 		<script src="<?= base_url('assets/template') ?>/js/theme.init.js"></script>
+		<!-- Examples -->
+		<script src="<?= base_url('assets/template') ?>/js/examples/examples.modals.js"></script>
 
 		</body>
 

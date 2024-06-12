@@ -14,7 +14,7 @@
                     <div class="form-group row pb-3">
                         <label class="col-sm-4 control-label text-sm-end pt-2">Nama Siswa: </label>
                         <div class="col-sm-8">
-                            <input type="text" name="nama_siswa" class="form-control" autofocus>
+                            <input type="text" name="nama_siswa" class="form-control" required autofocus>
                             <?= form_error('nama_siswa', '<div class="text-small text-danger">', '</div>');
                             ?>
                         </div>
@@ -38,7 +38,7 @@
                     <div class="form-group row pb-3">
                         <label class="col-sm-4 control-label text-sm-end pt-2">Nomor Telepon: </label>
                         <div class="col-sm-8">
-                            <input type="text" name="nomor_telepon" class="form-control">
+                            <input type="text" name="nomor_telepon" class="form-control" required>
                             <?= form_error('nomor_telepon', '<div class="text-small text-danger">', '</div>');
                             ?>
                         </div>
