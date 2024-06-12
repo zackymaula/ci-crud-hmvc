@@ -6,17 +6,14 @@
 
 		<section class="card">
 			<header class="card-header">
-				<div class="card-actions">
-					<a href="#" class="card-action card-action-toggle" data-card-toggle></a>
-					<a href="#" class="card-action card-action-dismiss" data-card-dismiss></a>
-				</div>
-
 				<h2 class="card-title">Siswa</h2>
 				<br>
 				<a href="<?= base_url('siswa/tambah') ?>" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah Siswa</a>
 			</header>
 			<div class="card-body">
-				<table class="table table-responsive-md mb-0">
+
+				<table class="table table-bordered table-striped mb-0" id="datatable-default">
+
 					<thead>
 						<tr><!-- class="text-center" -->
 							<th>No</th>
@@ -39,8 +36,6 @@
 								<td>
 									<button href="#edit<?= $key->id_siswa ?>" class="mb-1 mt-1 me-1 modal-basic btn btn-warning btn-sm"><i class="fas fa-edit"></i></button>
 									<button href="#delete<?= $key->id_siswa ?>" class="mb-1 mt-1 me-1 modal-basic btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
-									<!-- <a href="<?php //echo base_url('siswa/delete/' . $key->id_siswa) 
-													?>" class="btn btn-danger btn-sm" onclick="return comfirm('Apakah anda yakin menghapus data ini?')"><i class="fas fa-trash"></i></a> -->
 								</td>
 							</tr>
 						<?php endforeach ?>

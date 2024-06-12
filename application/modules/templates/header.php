@@ -28,6 +28,7 @@
 	<link rel="stylesheet" href="<?= base_url('assets/template') ?>/vendor/select2/css/select2.css" />
 	<link rel="stylesheet" href="<?= base_url('assets/template') ?>/vendor/select2-bootstrap-theme/select2-bootstrap.min.css" />
 	<link rel="stylesheet" href="<?= base_url('assets/template') ?>/vendor/pnotify/pnotify.custom.css" />
+	<link rel="stylesheet" href="<?= base_url('assets/template') ?>/vendor/datatables/media/css/dataTables.bootstrap5.css" />
 
 
 	<!-- Theme CSS -->
