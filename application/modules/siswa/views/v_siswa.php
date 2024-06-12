@@ -12,6 +12,7 @@
 				</div>
 
 				<h2 class="card-title">Siswa</h2>
+				<br>
 				<a href="<?= base_url('siswa/tambah') ?>" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah Siswa</a>
 			</header>
 			<div class="card-body">
@@ -37,7 +38,9 @@
 								<td><?= $key->nomor_telepon ?></td>
 								<td>
 									<button href="#edit<?= $key->id_siswa ?>" class="mb-1 mt-1 me-1 modal-basic btn btn-warning btn-sm"><i class="fas fa-edit"></i></button>
-									<a href="#" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
+									<button href="#delete<?= $key->id_siswa ?>" class="mb-1 mt-1 me-1 modal-basic btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+									<!-- <a href="<?php //echo base_url('siswa/delete/' . $key->id_siswa) 
+													?>" class="btn btn-danger btn-sm" onclick="return comfirm('Apakah anda yakin menghapus data ini?')"><i class="fas fa-trash"></i></a> -->
 								</td>
 							</tr>
 						<?php endforeach ?>
@@ -98,7 +101,65 @@
 				<footer class="card-footer">
 					<div class="row">
 						<div class="col-md-12 text-end">
-							<button type="submit" class="btn btn-primary">Edit</button>
+							<button type="submit" class="btn btn-primary">Simpan</button>
+							<button type="reset" class="btn btn-default modal-dismiss">Cancel</button>
+						</div>
+					</div>
+				</footer>
+			</section>
+		</form>
+	</div>
+<?php endforeach ?>
+
+
+<?php foreach ($siswa as $key) : ?>
+	<div id="delete<?= $key->id_siswa ?>" class="modal-block modal-header-color modal-block-danger mfp-hide">
+		<form action="<?= base_url('siswa/delete/' . $key->id_siswa) ?>" class="form-horizontal" method="POST">
+			<section class="card">
+				<header class="card-header">
+					<h2 class="card-title">Hapus Data <?= $key->id_siswa ?></h2>
+				</header>
+				<div class="card-body">
+					<div class="modal-wrapper">
+
+						<div class="form-group row pb-3">
+							<label class="col-sm-4 control-label text-sm-end pt-2">Nama Siswa: </label>
+							<div class="col-sm-8">
+								<input type="text" name="nama_siswa" class="form-control" value="<?= $key->nama_siswa ?>" disabled>
+								<?= form_error('nama_siswa', '<div class="text-small text-danger">', '</div>');
+								?>
+							</div>
+						</div>
+						<div class="form-group row pb-3">
+							<label class="col-sm-4 control-label text-sm-end pt-2">Kelas Siswa: </label>
+							<div class="col-sm-8">
+								<input type="text" name="kelas_siswa" class="form-control" value="<?= $key->kelas_siswa ?>" disabled>
+								<?= form_error('kelas_siswa', '<div class="text-small text-danger">', '</div>');
+								?>
+							</div>
+						</div>
+						<div class="form-group row pb-4">
+							<label class="col-lg-4 control-label text-lg-end pt-2" for="textareaDefault">Alamat Siswa: </label>
+							<div class="col-lg-8">
+								<textarea name="alamat_siswa" class="form-control" rows="3" id="textareaDefault" disabled><?= $key->alamat_siswa ?></textarea>
+								<?= form_error('alamat_siswa', '<div class="text-small text-danger">', '</div>');
+								?>
+							</div>
+						</div>
+						<div class="form-group row pb-3">
+							<label class="col-sm-4 control-label text-sm-end pt-2">Nomor Telepon: </label>
+							<div class="col-sm-8">
+								<input type="text" name="nomor_telepon" class="form-control" value="<?= $key->nomor_telepon ?>" disabled>
+								<?= form_error('nomor_telepon', '<div class="text-small text-danger">', '</div>');
+								?>
+							</div>
+						</div>
+					</div>
+				</div>
+				<footer class="card-footer">
+					<div class="row">
+						<div class="col-md-12 text-end">
+							<button type="submit" class="btn btn-danger">Hapus</button>
 							<button type="reset" class="btn btn-default modal-dismiss">Cancel</button>
 						</div>
 					</div>
