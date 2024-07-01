@@ -49,6 +49,8 @@
 
 <!-- <a class="mb-1 mt-1 me-1 modal-basic btn btn-primary" href="#modalHeaderColorPrimary">Primary</a> -->
 
+<!-- EDIT DATA -->
+
 <?php foreach ($siswa as $key) : ?>
 	<div id="edit<?= $key->id_siswa ?>" class="modal-block modal-header-color modal-block-primary mfp-hide">
 		<form action="<?= base_url('siswa/edit/' . $key->id_siswa) ?>" class="form-horizontal" method="POST">
@@ -106,6 +108,7 @@
 	</div>
 <?php endforeach ?>
 
+<!-- HAPUS DATA -->
 
 <?php foreach ($siswa as $key) : ?>
 	<div id="delete<?= $key->id_siswa ?>" class="modal-block modal-header-color modal-block-danger mfp-hide">

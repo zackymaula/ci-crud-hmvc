@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-lg-12">
-        <form action="<?= base_url('siswa/tambah_aksi') ?>" class="form-horizontal" method="POST">
+        <form id="myform" action="<?= base_url('siswa/tambah_aksi') ?>" class="form-horizontal" method="POST" onsubmit="return confirm('Yakin untuk menyimpan data?');">
             <section class="card">
                 <header class="card-header">
                     <div class="card-actions">
