@@ -3,11 +3,6 @@
         <form id="myform" action="<?= base_url('siswa/tambah_aksi') ?>" class="form-horizontal" method="POST" onsubmit="return confirm('Yakin untuk menyimpan data?');">
             <section class="card">
                 <header class="card-header">
-                    <div class="card-actions">
-                        <a href="#" class="card-action card-action-toggle" data-card-toggle></a>
-                        <a href="#" class="card-action card-action-dismiss" data-card-dismiss></a>
-                    </div>
-
                     <h2 class="card-title">Tambah Siswa</h2>
                 </header>
                 <div class="card-body">
