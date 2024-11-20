@@ -8,4 +8,9 @@ class Login extends CI_Controller
 	{
 		$this->load->view('v_login');
 	}
+
+	public function registration()
+	{
+		$this->load->view('v_registration');
+	}
 }
